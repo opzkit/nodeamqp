@@ -10,11 +10,19 @@
   "scripts": {
     "prepublish": "yarn run build",
     "prebuild": "node -p \"'export const LIB_VERSION = ' + JSON.stringify(require('./package.json').version) + ';'\" > lib/version.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
     "@types/amqplib": "^0.8.2",
+    "@types/jest": "^27.4.0",
     "@types/uuid": "^8.3.4",
+    "babel-jest": "^27.5.0",
+    "jest": "^27.5.0",
+    "ts-node": "^10.4.0",
     "typescript": "^4.5.5"
   },
   "dependencies": {
@@ -22,11 +30,15 @@
     "uuid": "^8.3.2"
   },
   "files": [
-    "dist/index.d.ts",
-    "dist/index.js",
-    "dist/naming.d.ts",
-    "dist/naming.js",
-    "dist/version.d.ts",
-    "dist/version.js"
+    "dist/lib/index.d.ts",
+    "dist/lib/index.js",
+    "dist/lib/logger.d.ts",
+    "dist/lib/logger.js",
+    "dist/lib/message_logger.d.ts",
+    "dist/lib/message_logger.js",
+    "dist/lib/naming.d.ts",
+    "dist/lib/naming.js",
+    "dist/lib/version.d.ts",
+    "dist/lib/version.js"
   ]
 }
