@@ -1,7 +1,12 @@
 {
   "name": "@opzkit/nodeamqp",
+  "homepage": "https://github.com/opzkit/nodeamqp",
   "version": "0.1.0",
   "description": "An opinionated AMQP library for NodeJS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opzkit/nodeamqp.git"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Joakim Olsson <joakim@unbound.se>",
@@ -40,5 +45,10 @@
     "dist/lib/naming.js",
     "dist/lib/version.d.ts",
     "dist/lib/version.js"
+  ],
+  "keywords": [
+    "AMQP",
+    "AMQP 0-9-1",
+    "RabbitMQ"
   ]
 }
