@@ -19,6 +19,9 @@ const serviceRequestExchangeName = (service: string): string =>
 const serviceResponseExchangeName = (service: string): string =>
   `${service}.headers.exchange.response`;
 
+const serviceRequestQueueName = (service: string): string =>
+  `${serviceRequestExchangeName(service)}.queue`;
+
 export {
   exchangeName,
   eventsExchangeName,
@@ -26,4 +29,5 @@ export {
   serviceEventRandomQueueName,
   serviceRequestExchangeName,
   serviceResponseExchangeName,
+  serviceRequestQueueName,
 };

@@ -6,7 +6,9 @@ import {
   eventStreamListener,
   eventStreamPublisher,
   Publisher,
+  requestResponseHandler,
   servicePublisher,
+  serviceRequestListener,
   serviceResponseListener,
   transientEventStreamListener,
   useLogger,
@@ -240,16 +242,86 @@ describe("Connection", () => {
         servicePublisher("target", svcPublisher),
         serviceResponseListener("target", "some.key", () =>
           Promise.reject(new Error("handler error"))
+        ),
+        serviceRequestListener("email.send", () =>
+          Promise.reject(new Error("handler error"))
+        ),
+        requestResponseHandler("sms.send", () =>
+          Promise.reject(new Error("handler error"))
         )
       )
     ).resolves.toBeUndefined();
     expect(logger).toHaveBeenCalledWith(
       "Successfully connected to dummy test-cluster 0.0.1"
     );
+    expect(mockCreateChannel).toHaveBeenCalledTimes(1);
     expect(logger).toHaveBeenCalledWith("nodeamqp started");
     expect(mockPrefetch).toHaveBeenCalledWith(100, true);
     expect(mockOn).toHaveBeenCalledWith("close", expect.any(Function));
-    expect(mockAssertQueue).toHaveBeenCalledWith(
+    expect(mockAssertExchange).toHaveBeenCalledTimes(6);
+    expect(mockAssertExchange).toHaveBeenNthCalledWith(
+      1,
+      "events.topic.exchange",
+      "topic",
+      {
+        autoDelete: false,
+        durable: true,
+        internal: false,
+      }
+    );
+    expect(mockAssertExchange).toHaveBeenNthCalledWith(
+      2,
+      "target.headers.exchange.response",
+      "headers",
+      {
+        autoDelete: false,
+        durable: true,
+        internal: false,
+      }
+    );
+    expect(mockAssertExchange).toHaveBeenNthCalledWith(
+      3,
+      "dummy.headers.exchange.response",
+      "headers",
+      {
+        autoDelete: false,
+        durable: true,
+        internal: false,
+      }
+    );
+    expect(mockAssertExchange).toHaveBeenNthCalledWith(
+      4,
+      "dummy.headers.exchange.response",
+      "headers",
+      {
+        autoDelete: false,
+        durable: true,
+        internal: false,
+      }
+    );
+    expect(mockAssertExchange).toHaveBeenNthCalledWith(
+      5,
+      "dummy.direct.exchange.request",
+      "direct",
+      {
+        autoDelete: false,
+        durable: true,
+        internal: false,
+      }
+    );
+    expect(mockAssertExchange).toHaveBeenNthCalledWith(
+      6,
+      "dummy.direct.exchange.request",
+      "direct",
+      {
+        autoDelete: false,
+        durable: true,
+        internal: false,
+      }
+    );
+    expect(mockAssertQueue).toHaveBeenCalledTimes(3);
+    expect(mockAssertQueue).toHaveBeenNthCalledWith(
+      1,
       "dummy.headers.exchange.response",
       {
         autoDelete: false,
@@ -258,11 +330,66 @@ describe("Connection", () => {
         expires: 432000000,
       }
     );
-    expect(mockBindQueue).toHaveBeenCalledWith(
+    expect(mockAssertQueue).toHaveBeenNthCalledWith(
+      2,
+      "dummy.direct.exchange.request.queue",
+      {
+        autoDelete: false,
+        durable: true,
+        exclusive: false,
+        expires: 432000000,
+      }
+    );
+    expect(mockAssertQueue).toHaveBeenNthCalledWith(
+      3,
+      "dummy.direct.exchange.request.queue",
+      {
+        autoDelete: false,
+        durable: true,
+        exclusive: false,
+        expires: 432000000,
+      }
+    );
+    expect(mockBindQueue).toHaveBeenCalledTimes(3);
+    expect(mockBindQueue).toHaveBeenNthCalledWith(
+      1,
       "dummy.headers.exchange.response",
       "target.headers.exchange.response",
       "some.key",
       { service: "dummy" }
+    );
+    expect(mockBindQueue).toHaveBeenNthCalledWith(
+      2,
+      "dummy.direct.exchange.request.queue",
+      "dummy.direct.exchange.request",
+      "email.send",
+      {}
+    );
+    expect(mockBindQueue).toHaveBeenNthCalledWith(
+      3,
+      "dummy.direct.exchange.request.queue",
+      "dummy.direct.exchange.request",
+      "sms.send",
+      {}
+    );
+    expect(mockConsume).toHaveBeenCalledTimes(2);
+    expect(mockConsume).toHaveBeenNthCalledWith(
+      1,
+      "dummy.headers.exchange.response",
+      expect.any(Function),
+      {
+        exclusive: false,
+        noLocal: false,
+      }
+    );
+    expect(mockConsume).toHaveBeenNthCalledWith(
+      2,
+      "dummy.direct.exchange.request.queue",
+      expect.any(Function),
+      {
+        exclusive: false,
+        noLocal: false,
+      }
     );
   });
 
@@ -691,6 +818,313 @@ describe("Connection", () => {
         queueRoutingKey: "test<->some.key",
       },
     })(msg);
+    expect(mockAck).toHaveBeenCalledWith(msg, false);
+  });
+
+  it("should do nothing and ack message on request response handler success without response", async () => {
+    const mockPrefetch = jest.fn();
+    const mockAssertExchange = jest.fn(() => Promise.resolve({}));
+    const mockAssertQueue = jest.fn(() => Promise.resolve());
+    const mockBindQueue = jest.fn(() => Promise.resolve());
+    const mockConsume = jest.fn(() => Promise.resolve());
+    const mockAck = jest.fn();
+    const channel = {
+      prefetch: mockPrefetch,
+      assertExchange: mockAssertExchange,
+      assertQueue: mockAssertQueue,
+      bindQueue: mockBindQueue,
+      consume: mockConsume,
+      ack: mockAck,
+    };
+    const mockCreateChannel = jest.fn(() => channel);
+    const consumeSpy = jest.spyOn(channel, "consume");
+    (amqp.connect as jest.Mock).mockResolvedValue({
+      connection: {
+        serverProperties: {
+          product: "dummy",
+          cluster_name: "test-cluster",
+          version: "0.0.1",
+        },
+      },
+      createChannel: mockCreateChannel,
+    });
+
+    const connection = new Connection("dummy", "amqp-url");
+
+    const logger = jest.fn();
+    const msgLogger = jest.fn();
+    await expect(
+      connection.start(
+        useLogger({ info: logger, error: logger, debug: logger }),
+        useMessageLogger(msgLogger),
+        requestResponseHandler("some.key", () => Promise.resolve())
+      )
+    ).resolves.toBeUndefined();
+
+    const msg: ConsumeMessage = {
+      content: Buffer.from('{"a":"b"}'),
+      fields: {
+        consumerTag: "",
+        exchange: "dummy",
+        routingKey: "some.key",
+        deliveryTag: 1,
+        redelivered: false,
+      },
+      properties: {
+        headers: {},
+        contentType: "application/json",
+        contentEncoding: "utf-8",
+        appId: "",
+        clusterId: "",
+        correlationId: "",
+        deliveryMode: "",
+        expiration: "",
+        type: "",
+        messageId: "",
+        replyTo: "",
+        priority: "",
+        userId: "",
+        timestamp: "",
+      },
+    };
+
+    // @ts-ignore
+    const handler: (msg: any) => void = consumeSpy.mock.calls[0][1];
+    await handler(msg);
+    expect(mockAck).toHaveBeenCalledWith(msg, false);
+  });
+
+  it("should nack message on request response handler success with response if service header is missing", async () => {
+    const mockPrefetch = jest.fn();
+    const mockAssertExchange = jest.fn(() => Promise.resolve({}));
+    const mockAssertQueue = jest.fn(() => Promise.resolve());
+    const mockBindQueue = jest.fn(() => Promise.resolve());
+    const mockConsume = jest.fn(() => Promise.resolve());
+    const mockNack = jest.fn();
+    const channel = {
+      prefetch: mockPrefetch,
+      assertExchange: mockAssertExchange,
+      assertQueue: mockAssertQueue,
+      bindQueue: mockBindQueue,
+      consume: mockConsume,
+      nack: mockNack,
+    };
+    const mockCreateChannel = jest.fn(() => channel);
+    const consumeSpy = jest.spyOn(channel, "consume");
+    (amqp.connect as jest.Mock).mockResolvedValue({
+      connection: {
+        serverProperties: {
+          product: "dummy",
+          cluster_name: "test-cluster",
+          version: "0.0.1",
+        },
+      },
+      createChannel: mockCreateChannel,
+    });
+
+    const connection = new Connection("dummy", "amqp-url");
+
+    const logger = jest.fn();
+    const msgLogger = jest.fn();
+    await expect(
+      connection.start(
+        useLogger({ info: logger, error: logger, debug: logger }),
+        useMessageLogger(msgLogger),
+        requestResponseHandler("some.key", () =>
+          Promise.resolve("response-value")
+        )
+      )
+    ).resolves.toBeUndefined();
+
+    const msg: ConsumeMessage = {
+      content: Buffer.from('{"a":"b"}'),
+      fields: {
+        consumerTag: "",
+        exchange: "dummy",
+        routingKey: "some.key",
+        deliveryTag: 1,
+        redelivered: false,
+      },
+      properties: {
+        headers: {},
+        contentType: "application/json",
+        contentEncoding: "utf-8",
+        appId: "",
+        clusterId: "",
+        correlationId: "",
+        deliveryMode: "",
+        expiration: "",
+        type: "",
+        messageId: "",
+        replyTo: "",
+        priority: "",
+        userId: "",
+        timestamp: "",
+      },
+    };
+
+    // @ts-ignore
+    const handler: (msg: any) => void = consumeSpy.mock.calls[0][1];
+    await handler(msg);
+    expect(mockNack).toHaveBeenCalledWith(msg, false, true);
+  });
+
+  it("should nack message on request response handler success with response if publish fails", async () => {
+    const mockPrefetch = jest.fn();
+    const mockAssertExchange = jest.fn(() => Promise.resolve({}));
+    const mockAssertQueue = jest.fn(() => Promise.resolve());
+    const mockBindQueue = jest.fn(() => Promise.resolve());
+    const mockConsume = jest.fn(() => Promise.resolve());
+    const mockNack = jest.fn();
+    const mockPublish = jest.fn(() => false);
+    const channel = {
+      prefetch: mockPrefetch,
+      assertExchange: mockAssertExchange,
+      assertQueue: mockAssertQueue,
+      bindQueue: mockBindQueue,
+      consume: mockConsume,
+      nack: mockNack,
+      publish: mockPublish,
+    };
+    const mockCreateChannel = jest.fn(() => channel);
+    const consumeSpy = jest.spyOn(channel, "consume");
+    (amqp.connect as jest.Mock).mockResolvedValue({
+      connection: {
+        serverProperties: {
+          product: "dummy",
+          cluster_name: "test-cluster",
+          version: "0.0.1",
+        },
+      },
+      createChannel: mockCreateChannel,
+    });
+
+    const connection = new Connection("dummy", "amqp-url");
+
+    const logger = jest.fn();
+    const msgLogger = jest.fn();
+    await expect(
+      connection.start(
+        useLogger({ info: logger, error: logger, debug: logger }),
+        useMessageLogger(msgLogger),
+        requestResponseHandler("some.key", () => Promise.resolve({ a: true }))
+      )
+    ).resolves.toBeUndefined();
+
+    const msg: ConsumeMessage = {
+      content: Buffer.from('{"a":"b"}'),
+      fields: {
+        consumerTag: "",
+        exchange: "dummy",
+        routingKey: "some.key",
+        deliveryTag: 1,
+        redelivered: false,
+      },
+      properties: {
+        headers: { service: "caller" },
+        contentType: "application/json",
+        contentEncoding: "utf-8",
+        appId: "",
+        clusterId: "",
+        correlationId: "",
+        deliveryMode: "",
+        expiration: "",
+        type: "",
+        messageId: "",
+        replyTo: "",
+        priority: "",
+        userId: "",
+        timestamp: "",
+      },
+    };
+
+    // @ts-ignore
+    const handler: (msg: any) => void = consumeSpy.mock.calls[0][1];
+    await handler(msg);
+    expect(mockNack).toHaveBeenCalledWith(msg, false, true);
+    expect(mockPublish).toHaveBeenCalledWith(
+      "dummy.headers.exchange.response",
+      "some.key",
+      Buffer.from('{"a":true}'),
+      {
+        contentType: "application/json",
+        headers: { service: "caller" },
+      }
+    );
+  });
+
+  it("should ack message on request response handler success with response if publish succeeds", async () => {
+    const mockPrefetch = jest.fn();
+    const mockAssertExchange = jest.fn(() => Promise.resolve({}));
+    const mockAssertQueue = jest.fn(() => Promise.resolve());
+    const mockBindQueue = jest.fn(() => Promise.resolve());
+    const mockConsume = jest.fn(() => Promise.resolve());
+    const mockAck = jest.fn();
+    const mockPublish = jest.fn(() => true);
+    const channel = {
+      prefetch: mockPrefetch,
+      assertExchange: mockAssertExchange,
+      assertQueue: mockAssertQueue,
+      bindQueue: mockBindQueue,
+      consume: mockConsume,
+      ack: mockAck,
+      publish: mockPublish,
+    };
+    const mockCreateChannel = jest.fn(() => channel);
+    const consumeSpy = jest.spyOn(channel, "consume");
+    (amqp.connect as jest.Mock).mockResolvedValue({
+      connection: {
+        serverProperties: {
+          product: "dummy",
+          cluster_name: "test-cluster",
+          version: "0.0.1",
+        },
+      },
+      createChannel: mockCreateChannel,
+    });
+
+    const connection = new Connection("dummy", "amqp-url");
+
+    const logger = jest.fn();
+    const msgLogger = jest.fn();
+    await expect(
+      connection.start(
+        useLogger({ info: logger, error: logger, debug: logger }),
+        useMessageLogger(msgLogger),
+        requestResponseHandler("some.key", () => Promise.resolve({ a: true }))
+      )
+    ).resolves.toBeUndefined();
+
+    const msg: ConsumeMessage = {
+      content: Buffer.from('{"a":"b"}'),
+      fields: {
+        consumerTag: "",
+        exchange: "dummy",
+        routingKey: "some.key",
+        deliveryTag: 1,
+        redelivered: false,
+      },
+      properties: {
+        headers: { service: "caller" },
+        contentType: "application/json",
+        contentEncoding: "utf-8",
+        appId: "",
+        clusterId: "",
+        correlationId: "",
+        deliveryMode: "",
+        expiration: "",
+        type: "",
+        messageId: "",
+        replyTo: "",
+        priority: "",
+        userId: "",
+        timestamp: "",
+      },
+    };
+
+    // @ts-ignore
+    const handler: (msg: any) => void = consumeSpy.mock.calls[0][1];
+    await handler(msg);
     expect(mockAck).toHaveBeenCalledWith(msg, false);
   });
 });

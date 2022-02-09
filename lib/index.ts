@@ -10,6 +10,7 @@ import {
   serviceEventQueueName,
   serviceEventRandomQueueName,
   serviceRequestExchangeName,
+  serviceRequestQueueName,
   serviceResponseExchangeName,
 } from "./naming";
 import { LIB_VERSION } from "./version";
@@ -355,6 +356,54 @@ function serviceResponseListener(
   };
 }
 
+function serviceRequestListener(routingKey: string, handler: Handler): Setup {
+  return async (conn: Connection) => {
+    const exchangeName = serviceRequestExchangeName(conn.serviceName);
+    const queueName = serviceRequestQueueName(conn.serviceName);
+    const resExchangeName = serviceResponseExchangeName(conn.serviceName);
+    await conn.exchangeDeclare(resExchangeName, "headers");
+    return conn.messageHandlerBindQueueToExchange(
+      queueName,
+      exchangeName,
+      routingKey,
+      "direct",
+      handler,
+      {}
+    );
+  };
+}
+
+function requestResponseHandler(routingKey: string, handler: Handler): Setup {
+  return async (conn: Connection) => {
+    return serviceRequestListener(routingKey, (msg, headers) => {
+      return handler(msg, headers).then((resp) => {
+        if (resp) {
+          const service = headers["service"];
+          if (!service) {
+            return Promise.reject(new Error("failed to extract service name"));
+          }
+          const content = Buffer.from(JSON.stringify(resp));
+          const success = conn.channel?.publish(
+            serviceResponseExchangeName(conn.serviceName),
+            routingKey,
+            content,
+            {
+              headers: { service: service },
+              contentType: "application/json",
+            }
+          );
+          if (success) {
+            return Promise.resolve();
+          }
+          return Promise.reject(new Error("unable to publish message"));
+        } else {
+          return Promise.resolve();
+        }
+      });
+    })(conn);
+  };
+}
+
 export {
   Connection,
   Publisher,
@@ -365,6 +414,8 @@ export {
   eventStreamPublisher,
   servicePublisher,
   serviceResponseListener,
+  serviceRequestListener,
+  requestResponseHandler,
   useLogger,
   useMessageLogger,
 };
