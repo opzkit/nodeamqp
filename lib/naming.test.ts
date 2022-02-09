@@ -5,6 +5,7 @@ import {
   serviceEventQueueName,
   serviceEventRandomQueueName,
   serviceRequestExchangeName,
+  serviceRequestQueueName,
   serviceResponseExchangeName,
 } from "./naming";
 
@@ -40,6 +41,12 @@ describe("naming", () => {
   it("serviceResponseExchangeName", () => {
     expect(serviceResponseExchangeName("test")).toBe(
       "test.headers.exchange.response"
+    );
+  });
+
+  it("serviceRequestQueueName", () => {
+    expect(serviceRequestQueueName("test")).toBe(
+      "test.direct.exchange.request.queue"
     );
   });
 });
