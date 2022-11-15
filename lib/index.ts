@@ -3,6 +3,7 @@ import {
   connect,
   Connection as AMQPConn,
   ConsumeMessage,
+  Replies,
 } from "amqplib";
 import { hostname } from "os";
 import {
@@ -208,7 +209,7 @@ class Connection {
       .catch((e) => Promise.reject(new Error(e)));
   }
 
-  queueDeclare(queueName: string): Promise<void> {
+  queueDeclare(queueName: string): Promise<Replies.AssertQueue | void> {
     return this.channel!.assertQueue(queueName, {
       durable: true,
       autoDelete: false,
@@ -217,7 +218,7 @@ class Connection {
     }).catch((e) => Promise.reject(new Error(e)));
   }
 
-  transientQueueDeclare(queueName: string): Promise<void> {
+  transientQueueDeclare(queueName: string): Promise<Replies.AssertQueue | void> {
     return this.channel!.assertQueue(queueName, {
       durable: false,
       autoDelete: true,
