@@ -8,7 +8,7 @@
     "url": "https://github.com/opzkit/nodeamqp.git"
   },
   "main": "dist/lib/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/lib/index.d.ts",
   "author": "Joakim Olsson <joakim@unbound.se>",
   "license": "MIT",
   "private": false,
