@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "amqplib": "^0.10.0",
-    "uuid": "^9.0.0"
+    "uuid": "^10.0.0"
   },
   "files": [
     "dist/lib/index.d.ts",
