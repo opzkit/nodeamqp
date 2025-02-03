@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.6.1](https://github.com/opzkit/nodeamqp/compare/v0.6.0...v0.6.1) (2025-02-03)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @babel/core from 7.26.0 to 7.26.7 ([967c647](https://github.com/opzkit/nodeamqp/commit/967c647304d54994cfd8154e9f4027512441dbd5))
+* **deps-dev:** bump @babel/preset-env from 7.26.0 to 7.26.7 ([29bc9f3](https://github.com/opzkit/nodeamqp/commit/29bc9f3fa60a5cb7132cfa445c8c9da2a9f5beb6))
+* **deps-dev:** bump @types/node from 22.10.10 to 22.12.0 ([6bb26ec](https://github.com/opzkit/nodeamqp/commit/6bb26ece36f9023009701b87fd443033ec055c90))
+* **deps-dev:** bump @types/node from 22.10.5 to 22.10.6 ([8dfb5da](https://github.com/opzkit/nodeamqp/commit/8dfb5da43fe2f55ad1538bdc275bf35cdc29cc4b))
+* **deps-dev:** bump @types/node from 22.10.6 to 22.10.7 ([2c67316](https://github.com/opzkit/nodeamqp/commit/2c67316921d1e602b304cdfc870121ad8e51804f))
+* **deps-dev:** bump @types/node from 22.10.7 to 22.10.10 ([40470ef](https://github.com/opzkit/nodeamqp/commit/40470ef8d526c5a24f8652c0d0ecf0b5c8ab091f))
+* **deps-dev:** bump @types/node from 22.12.0 to 22.13.0 ([d84f326](https://github.com/opzkit/nodeamqp/commit/d84f3264d381e3b0bd39944d7547a1b9693e5276))
+
 ## [0.6.0](https://github.com/opzkit/nodeamqp/compare/v0.5.1...v0.6.0) (2025-01-14)
 
 
