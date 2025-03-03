@@ -1,7 +1,7 @@
 import {
   Channel,
   connect,
-  Connection as AMQPConn,
+  ChannelModel as AMQPConn,
   ConsumeMessage,
   Replies,
 } from "amqplib";
