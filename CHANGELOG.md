@@ -1,5 +1,64 @@
 # Changelog
 
+## [0.7.0](https://github.com/opzkit/nodeamqp/compare/v0.6.1...v0.7.0) (2025-04-29)
+
+
+### Features
+
+* add commit linting and pre-commit workflows ([#515](https://github.com/opzkit/nodeamqp/issues/515)) ([dacac4d](https://github.com/opzkit/nodeamqp/commit/dacac4d3bf438de64566878a48787f5d7cfd5520))
+
+
+### Bug Fixes
+
+* **deps:** bump amqplib from 0.10.5 to 0.10.7 ([a51a26f](https://github.com/opzkit/nodeamqp/commit/a51a26ff6e42c25446e505e22c3c09ec7a78bdc1))
+* **deps:** pin dependencies ([#516](https://github.com/opzkit/nodeamqp/issues/516)) ([40f724c](https://github.com/opzkit/nodeamqp/commit/40f724c9988a5fb9293c44ffd0f40e0dadb95cf9))
+* **deps:** pin dependency @opzkit/nodeamqp to 0.1.1 ([#532](https://github.com/opzkit/nodeamqp/issues/532)) ([6331102](https://github.com/opzkit/nodeamqp/commit/63311027fe07db9f99fdebb8ba7757ff37b30e2c))
+* **deps:** update dependency @opzkit/nodeamqp to v0.6.1 ([#530](https://github.com/opzkit/nodeamqp/issues/530)) ([3c57986](https://github.com/opzkit/nodeamqp/commit/3c57986d54da00f68657158afdabaed886889863))
+* **deps:** update dependency amqplib to ^0.10.5 ([#525](https://github.com/opzkit/nodeamqp/issues/525)) ([cad462f](https://github.com/opzkit/nodeamqp/commit/cad462ff6e297350cdf41835005eef1c7f8729d4))
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @babel/core from 7.26.9 to 7.26.10 ([94d42b1](https://github.com/opzkit/nodeamqp/commit/94d42b1205cc654bd677c68d0243458f6fb7b2a2))
+* **deps-dev:** bump @babel/preset-typescript from 7.26.0 to 7.27.0 ([b8ce49a](https://github.com/opzkit/nodeamqp/commit/b8ce49a09264831c884920125948b90c3e73a7f7))
+* **deps-dev:** bump @types/node from 22.13.10 to 22.13.11 ([eb6e1be](https://github.com/opzkit/nodeamqp/commit/eb6e1be1487ef9241af6a578c0c5ff0aab44caa0))
+* **deps-dev:** bump @types/node from 22.13.11 to 22.13.13 ([b8ea806](https://github.com/opzkit/nodeamqp/commit/b8ea806f88cfc2ebbe88fe85f2a67f225fc10772))
+* **deps-dev:** bump @types/node from 22.13.13 to 22.13.14 ([b0bf74e](https://github.com/opzkit/nodeamqp/commit/b0bf74eb06471ef0d2ede1bcb53553c266d9a756))
+* **deps-dev:** bump @types/node from 22.13.14 to 22.13.17 ([3861a4b](https://github.com/opzkit/nodeamqp/commit/3861a4b197b1106bcd1c3d8e83eb52c9d91e6df3))
+* **deps-dev:** bump @types/node from 22.13.17 to 22.14.0 ([cb7cb27](https://github.com/opzkit/nodeamqp/commit/cb7cb27cc39ca40d3c469eb4b1bcbcb6bf2c5e7f))
+* **deps-dev:** bump @types/node from 22.13.8 to 22.13.9 ([94e7f54](https://github.com/opzkit/nodeamqp/commit/94e7f549894612b15d5e777613e8e5a1965a4204))
+* **deps-dev:** bump @types/node from 22.13.9 to 22.13.10 ([2f4ba0a](https://github.com/opzkit/nodeamqp/commit/2f4ba0aef63cc56fec8dba8fa9d291058a77c687))
+* **deps-dev:** bump typescript from 5.8.2 to 5.8.3 ([4155602](https://github.com/opzkit/nodeamqp/commit/41556022a2cee7e2796e20bbb1f7fa82a73c2bf0))
+* **deps:** add renovate.json ([#513](https://github.com/opzkit/nodeamqp/issues/513)) ([e07515b](https://github.com/opzkit/nodeamqp/commit/e07515b0317e36ea2a2adc1df94db96ed3b2172f))
+* **deps:** update actions/checkout action to v4 ([#517](https://github.com/opzkit/nodeamqp/issues/517)) ([df56158](https://github.com/opzkit/nodeamqp/commit/df561582773c464c87385cce2ebab2417358926a))
+* **deps:** update actions/setup-node action to v4 ([#518](https://github.com/opzkit/nodeamqp/issues/518)) ([c8ef6d4](https://github.com/opzkit/nodeamqp/commit/c8ef6d42c48bb295cd149cca86ea4bd79f191cef))
+* **deps:** update actions/setup-node action to v4 ([#527](https://github.com/opzkit/nodeamqp/issues/527)) ([0dd0330](https://github.com/opzkit/nodeamqp/commit/0dd0330b9117e52e6d71dab194ebf0b4784c6399))
+* **deps:** update actions/setup-node digest to 49933ea ([#534](https://github.com/opzkit/nodeamqp/issues/534)) ([bbedd12](https://github.com/opzkit/nodeamqp/commit/bbedd12b4cd4ab641c768b30fc1a7a95ddb7a032))
+* **deps:** update actions/setup-python action to v5.6.0 ([#537](https://github.com/opzkit/nodeamqp/issues/537)) ([1089ce9](https://github.com/opzkit/nodeamqp/commit/1089ce9f2f99998dd543b7b19d7e0ed29007a6aa))
+* **deps:** update babel monorepo ([#523](https://github.com/opzkit/nodeamqp/issues/523)) ([675dfe5](https://github.com/opzkit/nodeamqp/commit/675dfe5fd487138fd163d264d08847c5758e720c))
+* **deps:** update codecov/codecov-action action to v5 ([#519](https://github.com/opzkit/nodeamqp/issues/519)) ([803f6ca](https://github.com/opzkit/nodeamqp/commit/803f6ca0976ba758fa516883d5a5887f842c86ae))
+* **deps:** update codecov/codecov-action digest to ad3126e ([#536](https://github.com/opzkit/nodeamqp/issues/536)) ([f8cedda](https://github.com/opzkit/nodeamqp/commit/f8ceddab75358d71d26901014c5dce62fcec6127))
+* **deps:** update dependency @types/node to ^22.14.0 ([#526](https://github.com/opzkit/nodeamqp/issues/526)) ([b85a7e2](https://github.com/opzkit/nodeamqp/commit/b85a7e285f5d68da8de707b0397b7d0d1d27e259))
+* **deps:** update dependency @types/node to v22.14.1 ([#533](https://github.com/opzkit/nodeamqp/issues/533)) ([8e72ce0](https://github.com/opzkit/nodeamqp/commit/8e72ce0cd7dac31985f9cda1be8ad57fad425d37))
+* **deps:** update dependency @types/node to v22.15.1 ([#538](https://github.com/opzkit/nodeamqp/issues/538)) ([c78d3a6](https://github.com/opzkit/nodeamqp/commit/c78d3a6ee1d1a595cca49a65186f592594b1af41))
+* **deps:** update dependency @types/node to v22.15.2 ([#539](https://github.com/opzkit/nodeamqp/issues/539)) ([fe0d283](https://github.com/opzkit/nodeamqp/commit/fe0d283dab7dc2be5c283cd33720a06266b6064e))
+* **deps:** update dependency @types/node to v22.15.3 ([#540](https://github.com/opzkit/nodeamqp/issues/540)) ([26b87e6](https://github.com/opzkit/nodeamqp/commit/26b87e697fd87e75e167e07078523d8270282524))
+* **deps:** update dependency typescript to ^5.8.2 ([#524](https://github.com/opzkit/nodeamqp/issues/524)) ([0ead60c](https://github.com/opzkit/nodeamqp/commit/0ead60c41b12448761263b64c21a21205f7883ba))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.99.0 ([#535](https://github.com/opzkit/nodeamqp/issues/535)) ([a0c333c](https://github.com/opzkit/nodeamqp/commit/a0c333c36f91ea3806fc07b400b7d04a64b4c6d3))
+* migrate example from yarn to npm ([#531](https://github.com/opzkit/nodeamqp/issues/531)) ([17eae74](https://github.com/opzkit/nodeamqp/commit/17eae7460d0bbf440a2bc1634ad37e89ad7b1d69))
+* update package management from yarn to npm ([#521](https://github.com/opzkit/nodeamqp/issues/521)) ([9a9d753](https://github.com/opzkit/nodeamqp/commit/9a9d7531efb93c58d786990d68797ab0ae979367))
+* update pre-commit flow ([#528](https://github.com/opzkit/nodeamqp/issues/528)) ([9a8d896](https://github.com/opzkit/nodeamqp/commit/9a8d89642cc9477522434a87d56a846afe1608ce))
+
+
+### Code Refactoring
+
+* remove custom commitlint configuration ([#529](https://github.com/opzkit/nodeamqp/issues/529)) ([63a3ef3](https://github.com/opzkit/nodeamqp/commit/63a3ef3faa6c7fa6178cb26afaee63b3f171656d))
+
+
+### Continuous Integration
+
+* update release workflow to include CI steps ([#522](https://github.com/opzkit/nodeamqp/issues/522)) ([743ed18](https://github.com/opzkit/nodeamqp/commit/743ed18c2c92cfc01bd83aa14fd4ca55cd935885))
+
 ## [0.6.1](https://github.com/opzkit/nodeamqp/compare/v0.6.0...v0.6.1) (2025-03-03)
 
 
