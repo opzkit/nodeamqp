@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.7.1](https://github.com/opzkit/nodeamqp/compare/v0.7.0...v0.7.1) (2025-05-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency amqplib to v0.10.8 ([#543](https://github.com/opzkit/nodeamqp/issues/543)) ([7436f78](https://github.com/opzkit/nodeamqp/commit/7436f78efc331c36e6f94f6c5d88de7d81d1fbd8))
+
+
+### Miscellaneous Chores
+
+* **deps:** update babel monorepo to v7.27.1 ([#541](https://github.com/opzkit/nodeamqp/issues/541)) ([4abef57](https://github.com/opzkit/nodeamqp/commit/4abef5754658e61244a4090b9a22b03e686ef3be))
+
 ## [0.7.0](https://github.com/opzkit/nodeamqp/compare/v0.6.1...v0.7.0) (2025-04-29)
 
 
