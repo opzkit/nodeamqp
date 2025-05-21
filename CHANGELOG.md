@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.7.2](https://github.com/opzkit/nodeamqp/compare/v0.7.1...v0.7.2) (2025-05-21)
+
+
+### Miscellaneous Chores
+
+* **deps:** update codecov/codecov-action digest to 18283e0 ([#554](https://github.com/opzkit/nodeamqp/issues/554)) ([16d990e](https://github.com/opzkit/nodeamqp/commit/16d990e50504c53a011a9643ebba007c48d9287e))
+* **deps:** update dependency @babel/preset-env to v7.27.2 ([#548](https://github.com/opzkit/nodeamqp/issues/548)) ([b065320](https://github.com/opzkit/nodeamqp/commit/b065320128d9f7c81bb1d41ade81469fb23c2b1c))
+* **deps:** update dependency @types/node to v22.15.11 ([#546](https://github.com/opzkit/nodeamqp/issues/546)) ([c5ca588](https://github.com/opzkit/nodeamqp/commit/c5ca588c234f85377a91685312be69eda3c45bc6))
+* **deps:** update dependency @types/node to v22.15.12 ([#547](https://github.com/opzkit/nodeamqp/issues/547)) ([36e67fb](https://github.com/opzkit/nodeamqp/commit/36e67fb6ed4d974375eeece38dca4061af340282))
+* **deps:** update dependency @types/node to v22.15.14 ([#549](https://github.com/opzkit/nodeamqp/issues/549)) ([276333d](https://github.com/opzkit/nodeamqp/commit/276333d6458cbd65076aa6144cc55c6f4b7430d8))
+* **deps:** update dependency @types/node to v22.15.15 ([#550](https://github.com/opzkit/nodeamqp/issues/550)) ([bd74a20](https://github.com/opzkit/nodeamqp/commit/bd74a20b5f01111cc3185571713b422c8e5404a2))
+* **deps:** update dependency @types/node to v22.15.16 ([#551](https://github.com/opzkit/nodeamqp/issues/551)) ([eac849e](https://github.com/opzkit/nodeamqp/commit/eac849e503d1c65003bbd114795029cd79f4d65a))
+* **deps:** update dependency @types/node to v22.15.17 ([#552](https://github.com/opzkit/nodeamqp/issues/552)) ([a5833eb](https://github.com/opzkit/nodeamqp/commit/a5833eb621affb91866e66c8198b32a9b3d7340e))
+* **deps:** update dependency @types/node to v22.15.18 ([#553](https://github.com/opzkit/nodeamqp/issues/553)) ([8e215cc](https://github.com/opzkit/nodeamqp/commit/8e215ccf5c582f089b181fdaafd3821e188d81f4))
+* **deps:** update dependency @types/node to v22.15.19 ([#556](https://github.com/opzkit/nodeamqp/issues/556)) ([136758e](https://github.com/opzkit/nodeamqp/commit/136758e84001c14b53e2ac2f8d12178f25e5ebfd))
+* **deps:** update dependency @types/node to v22.15.20 ([#557](https://github.com/opzkit/nodeamqp/issues/557)) ([c9c6320](https://github.com/opzkit/nodeamqp/commit/c9c6320ef8c58b1fa9025c11af2121b606f35a0d))
+* **deps:** update dependency @types/node to v22.15.21 ([#558](https://github.com/opzkit/nodeamqp/issues/558)) ([4130a7b](https://github.com/opzkit/nodeamqp/commit/4130a7bfcbd481a2cebeecbfad444541f21fea44))
+* **deps:** update dependency @types/node to v22.15.9 ([#544](https://github.com/opzkit/nodeamqp/issues/544)) ([1ba0248](https://github.com/opzkit/nodeamqp/commit/1ba0248e0a91d9987510670d9c900818daeaf522))
+* remove unnecessary work flow for release please ([#555](https://github.com/opzkit/nodeamqp/issues/555)) ([d3f6275](https://github.com/opzkit/nodeamqp/commit/d3f62752664fe9ed0797954b754618d5a5c7cdc8))
+
 ## [0.7.1](https://github.com/opzkit/nodeamqp/compare/v0.7.0...v0.7.1) (2025-05-04)
 
 
