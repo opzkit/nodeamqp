@@ -25,7 +25,7 @@ describe("Publisher", () => {
     const publisher = new Publisher();
     return expect(
       publisher.publish({ a: true }, "testing")
-    ).rejects.toThrowError(
+    ).rejects.toThrow(
       "calling publish before start is completed is not possible"
     );
   });
@@ -36,7 +36,7 @@ describe("Publisher", () => {
     publisher.setup(connection, "test");
     return expect(
       publisher.publish({ a: true }, "testing")
-    ).rejects.toThrowError(
+    ).rejects.toThrow(
       "calling publish before start is completed is not possible"
     );
   });
@@ -66,7 +66,7 @@ describe("Publisher", () => {
     await connection.start(eventStreamPublisher(publisher));
     await expect(
       publisher.publish({ a: true }, "testing")
-    ).rejects.toThrowError("unable to publish message");
+    ).rejects.toThrow("unable to publish message");
     expect(mockCreateChannel).toHaveBeenCalledWith();
     expect(mockPrefetch).toHaveBeenCalledWith(20, true);
     expect(mockAssertExchange).toHaveBeenCalledWith(
@@ -122,13 +122,13 @@ describe("Connection", () => {
   it("should reject with error if already started", async () => {
     const connection = new Connection("dummy", "amqp-url");
     connection.started = true;
-    await expect(connection.start()).rejects.toThrowError("already started");
+    await expect(connection.start()).rejects.toThrow("already started");
   });
 
   it("should reject with error if connect fails", async () => {
     (amqp.connect as jest.Mock).mockRejectedValue(new Error("connect error"));
     const connection = new Connection("dummy", "amqp-url");
-    await expect(connection.start()).rejects.toThrowError("connect error");
+    await expect(connection.start()).rejects.toThrow("connect error");
   });
 
   it("should reject with error if create channel fails", async () => {
@@ -147,7 +147,7 @@ describe("Connection", () => {
     });
 
     const connection = new Connection("dummy", "amqp-url");
-    await expect(connection.start()).rejects.toThrowError(
+    await expect(connection.start()).rejects.toThrow(
       "create channel error"
     );
   });
@@ -171,7 +171,7 @@ describe("Connection", () => {
     });
 
     const connection = new Connection("dummy", "amqp-url");
-    await expect(connection.start()).rejects.toThrowError("prefetch error");
+    await expect(connection.start()).rejects.toThrow("prefetch error");
   });
 
   it("should reject with error if any setup fails", async () => {
@@ -198,7 +198,7 @@ describe("Connection", () => {
     const connection = new Connection("dummy", "amqp-url");
     await expect(
       connection.start(eventStreamPublisher(publisher))
-    ).rejects.toThrowError("setup error");
+    ).rejects.toThrow("setup error");
   });
 
   it("should resolve on setup success", async () => {
@@ -422,7 +422,7 @@ describe("Connection", () => {
           Promise.reject(new Error("handler error"))
         )
       )
-    ).rejects.toThrowError("setup queue error");
+    ).rejects.toThrow("setup queue error");
     expect(mockAssertQueue).toHaveBeenCalledWith(
       "events.topic.exchange.queue.dummy",
       {
@@ -463,7 +463,7 @@ describe("Connection", () => {
           Promise.reject(new Error("handler error"))
         )
       )
-    ).rejects.toThrowError("setup queue error");
+    ).rejects.toThrow("setup queue error");
     expect(mockAssertQueue).toHaveBeenCalledWith(
       "events.topic.exchange.queue.dummy-00000000-0000-0000-0000-000000000000",
       {
@@ -505,7 +505,7 @@ describe("Connection", () => {
           Promise.reject(new Error("handler error"))
         )
       )
-    ).rejects.toThrowError(
+    ).rejects.toThrow(
       "routingkey some.key for queue events.topic.exchange.queue.dummy already assigned to handler, can't reassign"
     );
   });
@@ -540,7 +540,7 @@ describe("Connection", () => {
           Promise.reject(new Error("handler error"))
         )
       )
-    ).rejects.toThrowError(
+    ).rejects.toThrow(
       "routingkey some.key for queue events.topic.exchange.queue.dummy-00000000-0000-0000-0000-000000000000 already assigned to handler, can't reassign"
     );
   });
