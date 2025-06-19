@@ -26,8 +26,8 @@
     "@types/jest": "30.0.0",
     "@types/node": "22.15.32",
     "@types/uuid": "10.0.0",
-    "babel-jest": "30.0.0",
-    "jest": "30.0.0",
+    "babel-jest": "30.0.1",
+    "jest": "30.0.1",
     "ts-node": "10.9.2",
     "typescript": "5.8.3"
   },
