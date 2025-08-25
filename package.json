@@ -32,7 +32,7 @@
     "typescript": "5.9.2"
   },
   "dependencies": {
-    "amqplib": "0.10.8",
+    "amqplib": "0.10.9",
     "uuid": "11.1.0"
   },
   "files": [
