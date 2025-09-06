@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.7.3](https://github.com/opzkit/nodeamqp/compare/v0.7.2...v0.7.3) (2025-09-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency uuid to v12 ([#610](https://github.com/opzkit/nodeamqp/issues/610)) ([a7f9fe8](https://github.com/opzkit/nodeamqp/commit/a7f9fe87e19d763d501ab15547e53d6922d7d854))
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/setup-node action to v5 ([#608](https://github.com/opzkit/nodeamqp/issues/608)) ([0ebefec](https://github.com/opzkit/nodeamqp/commit/0ebefec04823d99f3685d796415ba634ad695aad))
+* **deps:** update actions/setup-python action to v6 ([#609](https://github.com/opzkit/nodeamqp/issues/609)) ([882b533](https://github.com/opzkit/nodeamqp/commit/882b533bfd03818497c7b78ccac3fce74d44dc80))
+* **deps:** update codecov/codecov-action digest to 5a10915 ([#604](https://github.com/opzkit/nodeamqp/issues/604)) ([1cb17c5](https://github.com/opzkit/nodeamqp/commit/1cb17c5595b83f102ad9b7f55f2cb347f9970b85))
+* **deps:** update dependency @babel/core to v7.28.4 ([#605](https://github.com/opzkit/nodeamqp/issues/605)) ([2ff99bf](https://github.com/opzkit/nodeamqp/commit/2ff99bf7492d78b02263eadb2030b6a1bc98d0fa))
+* **deps:** update dependency @types/node to v22.18.1 ([#606](https://github.com/opzkit/nodeamqp/issues/606)) ([0cf9c43](https://github.com/opzkit/nodeamqp/commit/0cf9c43edb1429dfce21ff16fdfdb96321e59cb4))
+* **deps:** update jest monorepo ([#607](https://github.com/opzkit/nodeamqp/issues/607)) ([a928983](https://github.com/opzkit/nodeamqp/commit/a9289834a31a8efe8d593fbda9b295b81934b736))
+* **deps:** update jest monorepo to v30.1.0 ([#601](https://github.com/opzkit/nodeamqp/issues/601)) ([15c71e3](https://github.com/opzkit/nodeamqp/commit/15c71e301da96ce0b13f8cf8fe2d9454974ddc73))
+* **deps:** update jest monorepo to v30.1.1 ([#603](https://github.com/opzkit/nodeamqp/issues/603)) ([0ec2165](https://github.com/opzkit/nodeamqp/commit/0ec2165b26f3225c3d12f301fea213f9e9136ab6))
+
 ## [0.7.2](https://github.com/opzkit/nodeamqp/compare/v0.7.1...v0.7.2) (2025-08-25)
 
 
