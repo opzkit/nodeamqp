@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.6](https://github.com/opzkit/nodeamqp/compare/v0.7.5...v0.7.6) (2025-09-08)
+
+
+### Continuous Integration
+
+* add registry URL to release workflow for npm ([#617](https://github.com/opzkit/nodeamqp/issues/617)) ([c46349e](https://github.com/opzkit/nodeamqp/commit/c46349ee6a4c42fe7b2ae4547ca74d9bdb021868))
+
 ## [0.7.5](https://github.com/opzkit/nodeamqp/compare/v0.7.4...v0.7.5) (2025-09-08)
 
 
