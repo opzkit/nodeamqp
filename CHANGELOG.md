@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.4](https://github.com/opzkit/nodeamqp/compare/v0.7.3...v0.7.4) (2025-09-08)
+
+
+### Continuous Integration
+
+* re-add publish steps ([#611](https://github.com/opzkit/nodeamqp/issues/611)) ([a221dab](https://github.com/opzkit/nodeamqp/commit/a221dabfecbdd9df4560fb21532d4a3bc64424f0))
+
 ## [0.7.3](https://github.com/opzkit/nodeamqp/compare/v0.7.2...v0.7.3) (2025-09-06)
 
 
