@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.7.5](https://github.com/opzkit/nodeamqp/compare/v0.7.4...v0.7.5) (2025-09-08)
+
+
+### Miscellaneous Chores
+
+* **deps:** pin actions/setup-node action to f1f314f ([#613](https://github.com/opzkit/nodeamqp/issues/613)) ([c3197d5](https://github.com/opzkit/nodeamqp/commit/c3197d5b8c74e4e1e71d6dea4b854da9d2db6a12))
+
+
+### Continuous Integration
+
+* update GitHub Actions for release workflow ([#616](https://github.com/opzkit/nodeamqp/issues/616)) ([e4b26d7](https://github.com/opzkit/nodeamqp/commit/e4b26d7ba4b69ae4f9be87a5623fc5bcd7db7ad9))
+
 ## [0.7.4](https://github.com/opzkit/nodeamqp/compare/v0.7.3...v0.7.4) (2025-09-08)
 
 
