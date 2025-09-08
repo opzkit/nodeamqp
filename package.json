@@ -1,7 +1,7 @@
 {
   "name": "@opzkit/nodeamqp",
   "homepage": "https://github.com/opzkit/nodeamqp",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "An opinionated AMQP library for NodeJS",
   "repository": {
     "type": "git",
