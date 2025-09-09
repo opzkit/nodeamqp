@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.7](https://github.com/opzkit/nodeamqp/compare/v0.7.6...v0.7.7) (2025-09-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency uuid to v13 ([#619](https://github.com/opzkit/nodeamqp/issues/619)) ([211b52a](https://github.com/opzkit/nodeamqp/commit/211b52a999071a782409ea26918cdc2c1af6e74d))
+
 ## [0.7.6](https://github.com/opzkit/nodeamqp/compare/v0.7.5...v0.7.6) (2025-09-08)
 
 
