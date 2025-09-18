@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.7.8](https://github.com/opzkit/nodeamqp/compare/v0.7.7...v0.7.8) (2025-09-18)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/create-github-app-token digest to 6701853 ([#621](https://github.com/opzkit/nodeamqp/issues/621)) ([326d9f3](https://github.com/opzkit/nodeamqp/commit/326d9f3f4b741c9d41bbbcc0892aa045b2c8810d))
+* **deps:** update dependency @types/node to v22.18.3 ([#622](https://github.com/opzkit/nodeamqp/issues/622)) ([4c75f51](https://github.com/opzkit/nodeamqp/commit/4c75f51a19d79eb636c032ed3fb62492e4259f77))
+* **deps:** update dependency @types/node to v22.18.4 ([#624](https://github.com/opzkit/nodeamqp/issues/624)) ([3702c51](https://github.com/opzkit/nodeamqp/commit/3702c5100c05f6c9a036a2c20bbc9cfa6c5b3fdb))
+* **deps:** update dependency @types/node to v22.18.5 ([#625](https://github.com/opzkit/nodeamqp/issues/625)) ([3b021b6](https://github.com/opzkit/nodeamqp/commit/3b021b6ca3a5e0ba7a5b5631612a80827921c8b4))
+* **deps:** update dependency @types/node to v22.18.6 ([#627](https://github.com/opzkit/nodeamqp/issues/627)) ([6da63bc](https://github.com/opzkit/nodeamqp/commit/6da63bccf841cc2720269770cfd9b214f6de74fd))
+* **deps:** update dependency @types/uuid to v11 ([#626](https://github.com/opzkit/nodeamqp/issues/626)) ([a265802](https://github.com/opzkit/nodeamqp/commit/a2658026f83cd86878f39a780d6ce3c7322818b1))
+
 ## [0.7.7](https://github.com/opzkit/nodeamqp/compare/v0.7.6...v0.7.7) (2025-09-09)
 
 
