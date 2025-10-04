@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.7.8](https://github.com/opzkit/nodeamqp/compare/v0.7.7...v0.7.8) (2025-10-04)
+
+
+### Miscellaneous Chores
+
+* add renovate pre-commit check ([#634](https://github.com/opzkit/nodeamqp/issues/634)) ([2b72937](https://github.com/opzkit/nodeamqp/commit/2b729379eb26461b828ef2405ba19ea80cf02ad9))
+* **deps:** update actions/create-github-app-token digest to 6701853 ([#621](https://github.com/opzkit/nodeamqp/issues/621)) ([326d9f3](https://github.com/opzkit/nodeamqp/commit/326d9f3f4b741c9d41bbbcc0892aa045b2c8810d))
+* **deps:** update dependency @types/node to v22.18.3 ([#622](https://github.com/opzkit/nodeamqp/issues/622)) ([4c75f51](https://github.com/opzkit/nodeamqp/commit/4c75f51a19d79eb636c032ed3fb62492e4259f77))
+* **deps:** update dependency @types/node to v22.18.4 ([#624](https://github.com/opzkit/nodeamqp/issues/624)) ([3702c51](https://github.com/opzkit/nodeamqp/commit/3702c5100c05f6c9a036a2c20bbc9cfa6c5b3fdb))
+* **deps:** update dependency @types/node to v22.18.5 ([#625](https://github.com/opzkit/nodeamqp/issues/625)) ([3b021b6](https://github.com/opzkit/nodeamqp/commit/3b021b6ca3a5e0ba7a5b5631612a80827921c8b4))
+* **deps:** update dependency @types/node to v22.18.6 ([#627](https://github.com/opzkit/nodeamqp/issues/627)) ([6da63bc](https://github.com/opzkit/nodeamqp/commit/6da63bccf841cc2720269770cfd9b214f6de74fd))
+* **deps:** update dependency @types/node to v22.18.7 ([#630](https://github.com/opzkit/nodeamqp/issues/630)) ([1f236d5](https://github.com/opzkit/nodeamqp/commit/1f236d53802f5c500d260a199d3a2990443ce446))
+* **deps:** update dependency @types/node to v22.18.8 ([#633](https://github.com/opzkit/nodeamqp/issues/633)) ([78cd148](https://github.com/opzkit/nodeamqp/commit/78cd1484d22192c4b9935c5a9f40be01cb2d30d1))
+* **deps:** update dependency @types/uuid to v11 ([#626](https://github.com/opzkit/nodeamqp/issues/626)) ([a265802](https://github.com/opzkit/nodeamqp/commit/a2658026f83cd86878f39a780d6ce3c7322818b1))
+* **deps:** update dependency typescript to v5.9.3 ([#632](https://github.com/opzkit/nodeamqp/issues/632)) ([b2c6f40](https://github.com/opzkit/nodeamqp/commit/b2c6f405138285dad2741f68e2ccbb5f5b9725a1))
+* **deps:** update jest monorepo to v30.2.0 ([#629](https://github.com/opzkit/nodeamqp/issues/629)) ([b51982f](https://github.com/opzkit/nodeamqp/commit/b51982f816ae1c5d8dda0c9856d96e650702c97e))
+* **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.23.0 ([#635](https://github.com/opzkit/nodeamqp/issues/635)) ([6514cf9](https://github.com/opzkit/nodeamqp/commit/6514cf9690fe52d682bbc29bc05d1dd6f4bb8f55))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.100.1 ([#628](https://github.com/opzkit/nodeamqp/issues/628)) ([257225b](https://github.com/opzkit/nodeamqp/commit/257225bccefbb3adf5fdc00da335c2c43e26ba86))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.101.0 ([#631](https://github.com/opzkit/nodeamqp/issues/631)) ([7f081e8](https://github.com/opzkit/nodeamqp/commit/7f081e82ada4ee1b2699502cdb2b73bc58a81b1f))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v41.135.3 ([#638](https://github.com/opzkit/nodeamqp/issues/638)) ([9b139bd](https://github.com/opzkit/nodeamqp/commit/9b139bd8bbe1615553382db0537d47c05f399e0d))
+* **deps:** update terraform-linters/setup-tflint action to v6 ([#636](https://github.com/opzkit/nodeamqp/issues/636)) ([85e60bd](https://github.com/opzkit/nodeamqp/commit/85e60bda1481bcaea7f06cd68b316c052e444d97))
+* **deps:** update terraform-linters/setup-tflint action to v6.1.0 ([#637](https://github.com/opzkit/nodeamqp/issues/637)) ([22c97e7](https://github.com/opzkit/nodeamqp/commit/22c97e7a9815b753176648b08b4cb38d4307a5e4))
+
 ## [0.7.7](https://github.com/opzkit/nodeamqp/compare/v0.7.6...v0.7.7) (2025-09-09)
 
 
