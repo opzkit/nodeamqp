@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.8.1](https://github.com/opzkit/nodeamqp/compare/v0.8.0...v0.8.1) (2026-01-12)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @types/node to v24.10.6 ([#707](https://github.com/opzkit/nodeamqp/issues/707)) ([64a6a39](https://github.com/opzkit/nodeamqp/commit/64a6a3916967b0a764be43c61707696bde6db4c0))
+* **deps:** update dependency @types/node to v24.10.7 ([#708](https://github.com/opzkit/nodeamqp/issues/708)) ([b0afbd7](https://github.com/opzkit/nodeamqp/commit/b0afbd70791ae66c2b75d8a98064ebe49d2f0f91))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.104.1 ([#703](https://github.com/opzkit/nodeamqp/issues/703)) ([bb36a65](https://github.com/opzkit/nodeamqp/commit/bb36a65e294019648a64c4f537f96e1afbd361d5))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.105.0 ([#706](https://github.com/opzkit/nodeamqp/issues/706)) ([713df5b](https://github.com/opzkit/nodeamqp/commit/713df5b60b3cc8186923a9fd22549647811b8514))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v42.71.0 ([#705](https://github.com/opzkit/nodeamqp/issues/705)) ([7eca68a](https://github.com/opzkit/nodeamqp/commit/7eca68a6dce3172dc59a0b221f3a849570617497))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v42.78.1 ([#709](https://github.com/opzkit/nodeamqp/issues/709)) ([07a5596](https://github.com/opzkit/nodeamqp/commit/07a55961a6dcf19bbe1c7340b99427a74fa403cd))
+
 ## [0.8.0](https://github.com/opzkit/nodeamqp/compare/v0.7.7...v0.8.0) (2025-12-18)
 
 
