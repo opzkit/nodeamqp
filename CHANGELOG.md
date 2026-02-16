@@ -1,5 +1,35 @@
 # Changelog
 
+## [0.8.1](https://github.com/opzkit/nodeamqp/compare/v0.8.0...v0.8.1) (2026-02-16)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/checkout action to v6.0.2 ([#717](https://github.com/opzkit/nodeamqp/issues/717)) ([c01bb87](https://github.com/opzkit/nodeamqp/commit/c01bb870309a964db30fb31feb366ce95a69c26c))
+* **deps:** update actions/checkout digest to de0fac2 ([#722](https://github.com/opzkit/nodeamqp/issues/722)) ([6c23280](https://github.com/opzkit/nodeamqp/commit/6c23280c08f0a66b45844cdaa095f9b2b667db90))
+* **deps:** update actions/setup-node digest to 6044e13 ([#713](https://github.com/opzkit/nodeamqp/issues/713)) ([a22c95e](https://github.com/opzkit/nodeamqp/commit/a22c95ed847c66752006d3dd4ebe4911640ce8f5))
+* **deps:** update actions/setup-python action to v6.2.0 ([#716](https://github.com/opzkit/nodeamqp/issues/716)) ([4980c60](https://github.com/opzkit/nodeamqp/commit/4980c60da3e7565dad4dfbe52d775610c058c919))
+* **deps:** update babel monorepo to v7.28.6 ([#710](https://github.com/opzkit/nodeamqp/issues/710)) ([c416d17](https://github.com/opzkit/nodeamqp/commit/c416d179bbd68b83857d35e7ab6652eafc0790fd))
+* **deps:** update babel monorepo to v7.29.0 ([#718](https://github.com/opzkit/nodeamqp/issues/718)) ([c67fa8d](https://github.com/opzkit/nodeamqp/commit/c67fa8dcbc50ceb81a5927542d8366f12d9f585f))
+* **deps:** update dependency @types/node to v24.10.10 ([#721](https://github.com/opzkit/nodeamqp/issues/721)) ([76371cb](https://github.com/opzkit/nodeamqp/commit/76371cbb44763b7ece4e73ff3c8bbe21f85a6627))
+* **deps:** update dependency @types/node to v24.10.11 ([#723](https://github.com/opzkit/nodeamqp/issues/723)) ([35f7543](https://github.com/opzkit/nodeamqp/commit/35f7543ab1493fcda8ecdf0cca9898671a378b1e))
+* **deps:** update dependency @types/node to v24.10.12 ([#724](https://github.com/opzkit/nodeamqp/issues/724)) ([ca688ee](https://github.com/opzkit/nodeamqp/commit/ca688ee68c168218b325334a910ea64a74305684))
+* **deps:** update dependency @types/node to v24.10.13 ([#726](https://github.com/opzkit/nodeamqp/issues/726)) ([3daccae](https://github.com/opzkit/nodeamqp/commit/3daccae88b3b0104012e7a837ecec03dc2285db0))
+* **deps:** update dependency @types/node to v24.10.6 ([#707](https://github.com/opzkit/nodeamqp/issues/707)) ([64a6a39](https://github.com/opzkit/nodeamqp/commit/64a6a3916967b0a764be43c61707696bde6db4c0))
+* **deps:** update dependency @types/node to v24.10.7 ([#708](https://github.com/opzkit/nodeamqp/issues/708)) ([b0afbd7](https://github.com/opzkit/nodeamqp/commit/b0afbd70791ae66c2b75d8a98064ebe49d2f0f91))
+* **deps:** update dependency @types/node to v24.10.8 ([#711](https://github.com/opzkit/nodeamqp/issues/711)) ([085700f](https://github.com/opzkit/nodeamqp/commit/085700f4b268210516f48142fab713cf549dadc8))
+* **deps:** update dependency @types/node to v24.10.9 ([#714](https://github.com/opzkit/nodeamqp/issues/714)) ([3ca4f5d](https://github.com/opzkit/nodeamqp/commit/3ca4f5d684d714cf6d3e5717a45f9504ddfba333))
+* **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.24.0 ([#712](https://github.com/opzkit/nodeamqp/issues/712)) ([83963ea](https://github.com/opzkit/nodeamqp/commit/83963eaf6624f04e10511d637bdeb2cdfb6af137))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.104.1 ([#703](https://github.com/opzkit/nodeamqp/issues/703)) ([bb36a65](https://github.com/opzkit/nodeamqp/commit/bb36a65e294019648a64c4f537f96e1afbd361d5))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.105.0 ([#706](https://github.com/opzkit/nodeamqp/issues/706)) ([713df5b](https://github.com/opzkit/nodeamqp/commit/713df5b60b3cc8186923a9fd22549647811b8514))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v42.71.0 ([#705](https://github.com/opzkit/nodeamqp/issues/705)) ([7eca68a](https://github.com/opzkit/nodeamqp/commit/7eca68a6dce3172dc59a0b221f3a849570617497))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v42.78.1 ([#709](https://github.com/opzkit/nodeamqp/issues/709)) ([07a5596](https://github.com/opzkit/nodeamqp/commit/07a55961a6dcf19bbe1c7340b99427a74fa403cd))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v42.84.0 ([#715](https://github.com/opzkit/nodeamqp/issues/715)) ([87cd84e](https://github.com/opzkit/nodeamqp/commit/87cd84e49593dc81243da21b1d36d576cd040f5f))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v42.95.1 ([#719](https://github.com/opzkit/nodeamqp/issues/719)) ([e53a525](https://github.com/opzkit/nodeamqp/commit/e53a525b9a9a9c8c7d24d495fcd9a1fc6eb77682))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43 ([#720](https://github.com/opzkit/nodeamqp/issues/720)) ([8f6c9ab](https://github.com/opzkit/nodeamqp/commit/8f6c9abf7ae5ad23a3a70670441eca594c5cb3d4))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.15.1 ([#727](https://github.com/opzkit/nodeamqp/issues/727)) ([fb67580](https://github.com/opzkit/nodeamqp/commit/fb6758092ce9d40b2ecb7baa7a487e2ad31cfd50))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.4.3 ([#725](https://github.com/opzkit/nodeamqp/issues/725)) ([2c11db7](https://github.com/opzkit/nodeamqp/commit/2c11db794bd9f4fdeb24fb7ed0d4e82674552f5c))
+
 ## [0.8.0](https://github.com/opzkit/nodeamqp/compare/v0.7.7...v0.8.0) (2025-12-18)
 
 
