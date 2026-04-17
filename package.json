@@ -27,7 +27,7 @@
     "babel-jest": "30.3.0",
     "jest": "30.3.0",
     "ts-node": "10.9.2",
-    "typescript": "6.0.2"
+    "typescript": "6.0.3"
   },
   "dependencies": {
     "amqplib": "1.0.3",
