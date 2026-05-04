@@ -222,7 +222,7 @@ class Connection {
     return this.channel!.assertQueue(queueName, {
       durable: false,
       autoDelete: true,
-      exclusive: false,
+      exclusive: true,
       expires: QUEUE_EXPIRATION,
     }).catch((e) => Promise.reject(new Error(e)));
   }

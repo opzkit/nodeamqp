@@ -469,7 +469,7 @@ describe("Connection", () => {
       {
         autoDelete: true,
         durable: false,
-        exclusive: false,
+        exclusive: true,
         expires: 432000000,
       }
     );
