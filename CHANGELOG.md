@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.2](https://github.com/opzkit/nodeamqp/compare/v0.8.1...v0.8.2) (2026-05-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency amqplib to v1.0.4 ([#773](https://github.com/opzkit/nodeamqp/issues/773)) ([6061e21](https://github.com/opzkit/nodeamqp/commit/6061e2119b7c5bde3f355fdc6993da1bc4b25df9))
+
 ## [0.8.1](https://github.com/opzkit/nodeamqp/compare/v0.8.0...v0.8.1) (2026-05-04)
 
 
