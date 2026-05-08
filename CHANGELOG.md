@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.8.3](https://github.com/opzkit/nodeamqp/compare/v0.8.2...v0.8.3) (2026-05-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency amqplib to v1.0.5 ([#775](https://github.com/opzkit/nodeamqp/issues/775)) ([ff558bf](https://github.com/opzkit/nodeamqp/commit/ff558bf21ef2c3c7c6a6e0ef6943a367991409d0))
+
+
+### Miscellaneous Chores
+
+* **deps:** bump uuid and @opzkit/nodeamqp in /examples ([#772](https://github.com/opzkit/nodeamqp/issues/772)) ([369dd5c](https://github.com/opzkit/nodeamqp/commit/369dd5c9d909a72e310a9650bfbca96d6d99fb10))
+
 ## [0.8.2](https://github.com/opzkit/nodeamqp/compare/v0.8.1...v0.8.2) (2026-05-08)
 
 
