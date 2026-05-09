@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.8.4](https://github.com/opzkit/nodeamqp/compare/v0.8.3...v0.8.4) (2026-05-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency amqplib to v1.0.6 ([#779](https://github.com/opzkit/nodeamqp/issues/779)) ([b945698](https://github.com/opzkit/nodeamqp/commit/b9456984fea73941d9097a59201768466e8b940f))
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @babel/preset-env to v7.29.5 ([#777](https://github.com/opzkit/nodeamqp/issues/777)) ([e8d0e12](https://github.com/opzkit/nodeamqp/commit/e8d0e1297d0098ff2edff5b850f6287b70275524))
+
 ## [0.8.3](https://github.com/opzkit/nodeamqp/compare/v0.8.2...v0.8.3) (2026-05-08)
 
 
