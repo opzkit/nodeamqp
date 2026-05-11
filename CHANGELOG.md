@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.8.5](https://github.com/opzkit/nodeamqp/compare/v0.8.4...v0.8.5) (2026-05-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency amqplib to v1.0.7 ([#785](https://github.com/opzkit/nodeamqp/issues/785)) ([eba04c6](https://github.com/opzkit/nodeamqp/commit/eba04c6243a0e5571fa2f5fa0b3269ab73049e4f))
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @types/node to v24.12.3 ([#781](https://github.com/opzkit/nodeamqp/issues/781)) ([600f5cb](https://github.com/opzkit/nodeamqp/commit/600f5cb4ad9a31529e0e69f55cda3c1d3a529c8e))
+* **deps:** update jest monorepo to v30.4.0 ([#780](https://github.com/opzkit/nodeamqp/issues/780)) ([a220b39](https://github.com/opzkit/nodeamqp/commit/a220b39e076ca7438e5dea79cbed70e71714ca65))
+* **deps:** update jest monorepo to v30.4.1 ([#784](https://github.com/opzkit/nodeamqp/issues/784)) ([dc7255a](https://github.com/opzkit/nodeamqp/commit/dc7255a4858e46469f1b6ca926897df2e4e1ffb7))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.150.0 ([#782](https://github.com/opzkit/nodeamqp/issues/782)) ([26f49e4](https://github.com/opzkit/nodeamqp/commit/26f49e4bdca9dec9cdf79b5d37303e3c04863445))
+
 ## [0.8.4](https://github.com/opzkit/nodeamqp/compare/v0.8.3...v0.8.4) (2026-05-09)
 
 
