@@ -24,8 +24,8 @@
     "@babel/preset-typescript": "7.28.5",
     "@types/amqplib": "0.10.8",
     "@types/node": "24.12.3",
-    "babel-jest": "30.3.0",
-    "jest": "30.3.0",
+    "babel-jest": "30.4.0",
+    "jest": "30.4.0",
     "ts-node": "10.9.2",
     "typescript": "6.0.3"
   },
