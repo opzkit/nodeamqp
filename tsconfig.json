@@ -5,7 +5,8 @@
     "declaration": true,
     "rootDir": "./lib",
     "outDir": "./dist",
-    "strict": true
+    "strict": true,
+    "types": ["node"]
   },
   "include": ["lib/**/*.ts"],
   "exclude": ["lib/**/*.test.ts"]
