@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.8.6](https://github.com/opzkit/nodeamqp/compare/v0.8.5...v0.8.6) (2026-05-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency amqplib to v2 ([#790](https://github.com/opzkit/nodeamqp/issues/790)) ([427a0e6](https://github.com/opzkit/nodeamqp/commit/427a0e66efb335b8f087fcb4103a7b4dcec36aaf))
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/create-github-app-token digest to bcd2ba4 ([#789](https://github.com/opzkit/nodeamqp/issues/789)) ([7ed69b6](https://github.com/opzkit/nodeamqp/commit/7ed69b61f44b024d4eabf7d2d555ac60ad1a9f9d))
+* **deps:** update dependency @types/node to v24.12.4 ([#791](https://github.com/opzkit/nodeamqp/issues/791)) ([1b3c2e5](https://github.com/opzkit/nodeamqp/commit/1b3c2e5bc201523232bf6252b62e9c5dcecba298))
+* **deps:** update dependency jest to v30.4.2 ([#786](https://github.com/opzkit/nodeamqp/issues/786)) ([91b1d5e](https://github.com/opzkit/nodeamqp/commit/91b1d5e5cfce053fbc0a72f968aee38b78b405da))
+
 ## [0.8.5](https://github.com/opzkit/nodeamqp/compare/v0.8.4...v0.8.5) (2026-05-11)
 
 
