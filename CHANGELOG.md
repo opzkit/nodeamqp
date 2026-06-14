@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.8.7](https://github.com/opzkit/nodeamqp/compare/v0.8.6...v0.8.7) (2026-06-14)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/checkout action to v6.0.3 ([#796](https://github.com/opzkit/nodeamqp/issues/796)) ([06d2de6](https://github.com/opzkit/nodeamqp/commit/06d2de60e9c4bf74221f598a9ec0c6e4faefeedc))
+* **deps:** update actions/checkout digest to df4cb1c ([#795](https://github.com/opzkit/nodeamqp/issues/795)) ([9209f82](https://github.com/opzkit/nodeamqp/commit/9209f82a5f13cfb0c1b86c3e58f8ebd47726cf12))
+* **deps:** update babel monorepo to v7.29.7 ([#794](https://github.com/opzkit/nodeamqp/issues/794)) ([61a8399](https://github.com/opzkit/nodeamqp/commit/61a83992084bcd62098f45c256e8f4119514843e))
+* **deps:** update codecov/codecov-action action to v7 ([#801](https://github.com/opzkit/nodeamqp/issues/801)) ([2eae042](https://github.com/opzkit/nodeamqp/commit/2eae042c7957ee4f5e07b5d96f2d0d5a7b69692c))
+* **deps:** update codecov/codecov-action digest to e79a696 ([#792](https://github.com/opzkit/nodeamqp/issues/792)) ([e9ae80f](https://github.com/opzkit/nodeamqp/commit/e9ae80f0ad0a5caa3179f0b33279aff7cba8365b))
+* **deps:** update codecov/codecov-action digest to fb8b358 ([#797](https://github.com/opzkit/nodeamqp/issues/797)) ([ca824ab](https://github.com/opzkit/nodeamqp/commit/ca824abe12f0367517cd2739cc1e8a1a3532da5d))
+* **deps:** update dependency @types/node to v24.13.0 ([#798](https://github.com/opzkit/nodeamqp/issues/798)) ([da9db47](https://github.com/opzkit/nodeamqp/commit/da9db476b465884e469149c7be73062df2ab771e))
+* **deps:** update dependency @types/node to v24.13.1 ([#800](https://github.com/opzkit/nodeamqp/issues/800)) ([bd97c1c](https://github.com/opzkit/nodeamqp/commit/bd97c1c82402febd77398ce268fac73a43c1b697))
+* **deps:** update dependency @types/node to v24.13.2 ([#802](https://github.com/opzkit/nodeamqp/issues/802)) ([569a012](https://github.com/opzkit/nodeamqp/commit/569a01217f16cfd3991c8ad8f7483d3a44869606))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.212.4 ([#799](https://github.com/opzkit/nodeamqp/issues/799)) ([8f9e9cb](https://github.com/opzkit/nodeamqp/commit/8f9e9cb54513bf6a36d713bf361c082e739a677b))
+
 ## [0.8.6](https://github.com/opzkit/nodeamqp/compare/v0.8.5...v0.8.6) (2026-05-18)
 
 
