@@ -23,7 +23,7 @@
     "@babel/preset-env": "8.0.2",
     "@babel/preset-typescript": "8.0.1",
     "@types/amqplib": "0.10.8",
-    "@types/node": "24.13.3",
+    "@types/node": "24.13.4",
     "babel-jest": "30.5.0",
     "jest": "30.5.0",
     "ts-node": "10.9.2",
