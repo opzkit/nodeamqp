@@ -19,9 +19,9 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@babel/core": "8.0.6",
-    "@babel/preset-env": "8.0.6",
-    "@babel/preset-typescript": "8.0.1",
+    "@babel/core": "8.0.7",
+    "@babel/preset-env": "8.0.7",
+    "@babel/preset-typescript": "8.0.7",
     "@types/amqplib": "0.10.8",
     "@types/node": "24.19.0",
     "babel-jest": "30.5.0",
